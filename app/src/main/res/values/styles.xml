@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Campos blancos, redondeados -->
+    <style name="Widget.Eco.FilledField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="hintTextColor">@color/textMuted</item>
+        <item name="android:textColorHint">@color/textMuted</item>
+        <item name="startIconTint">@color/greenPrimary</item>
+        <item name="endIconTint">@color/greenPrimary</item>
+    </style>
+
+    <!-- Botón negro redondeado -->
+    <style name="Widget.Eco.PrimaryBlack" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="rippleColor">@color/greenSecondary</item>
+    </style>
+</resources>

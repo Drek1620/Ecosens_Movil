@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ecosens_Movil" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Ecosens_Movil" parent="Base.Theme.Ecosens_Movil" />
+
+    <style name="Theme.Eco" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores base -->
+        <item name="colorPrimary">@color/greenPrimary</item>
+        <item name="colorPrimaryVariant">@color/greenDark</item>
+        <item name="colorSecondary">@color/greenSecondary</item>
+        <item name="android:statusBarColor">@color/greenDark</item>
+        <!-- Fuente general -->
+        <item name="android:fontFamily">sans_serif</item>
+    </style>
+</resources>
