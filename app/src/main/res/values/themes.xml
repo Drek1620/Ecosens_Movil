@@ -15,5 +15,6 @@
         <item name="android:statusBarColor">@color/greenDark</item>
         <!-- Fuente general -->
         <item name="android:fontFamily">sans_serif</item>
+
     </style>
 </resources>
