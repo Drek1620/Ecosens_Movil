@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main) // dices que ya tienes el diseño
 
-        etEmail = findViewById(R.id.etEmail)       // asegúrate que los ids coincidan
+        etEmail = findViewById(R.id.etCorreo)       // asegúrate que los ids coincidan
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
         progress = findViewById(R.id.progressBar)

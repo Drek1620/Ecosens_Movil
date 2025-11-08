@@ -1,8 +1,8 @@
 package com.example.ecosens_movil.repo
 
-import com.tuempresa.ecosens_movil.network.ApiClient
-import com.tuempresa.ecosens_movil.network.LoginRequest
-import com.tuempresa.ecosens_movil.network.LoginResponse
+import com.example.ecosens_movil.network.ApiClient
+import com.example.ecosens_movil.network.LoginRequest
+import com.example.ecosens_movil.network.LoginResponse
 
 class LoginRepository {
     private val api = ApiClient.retrofit
