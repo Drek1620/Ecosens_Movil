@@ -8,7 +8,7 @@ class LoginRepository {
     private val api = ApiClient.retrofit
 
     suspend fun login(email: String, password: String): LoginResponse {
-        val request = LoginRequest(email = email, password = password)
+        val request = LoginRequest(correo = email, contrasena = password)
         return api.login(request)
     }
 }

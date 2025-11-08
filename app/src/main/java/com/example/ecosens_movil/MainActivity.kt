@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                     // startActivity(intent)
                     // finish()
                 } else {
-                    val msg = response.message ?: "Error en login"
+                    val msg = response.token?: "Error en login"
                     Toast.makeText(this@MainActivity, msg, Toast.LENGTH_LONG).show()
                 }
             } catch (e: Exception) {

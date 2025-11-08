@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiClient {
     // Cambia la baseUrl por la de tu API. Para emulador local: "http://10.0.2.2:5000/"
-    private const val BASE_URL = "http://ecosensapi20250513230303.azurewebsites.net/"
+    private const val BASE_URL = "https://ecosensapi20250513230303.azurewebsites.net/"
 
     private val logging = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
