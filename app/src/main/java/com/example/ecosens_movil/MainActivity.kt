@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main) // dices que ya tienes el diseño
+        setContentView(R.layout.activity_main)
 
-        etEmail = findViewById(R.id.etCorreo)       // asegúrate que los ids coincidan
+        etEmail = findViewById(R.id.etCorreo)
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
         progress = findViewById(R.id.progressBar)
@@ -58,20 +58,25 @@ class MainActivity : AppCompatActivity() {
                 progress.visibility = android.view.View.GONE
                 btnLogin.isEnabled = true
 
-                if (response.token != null) {
-                    // Guarda token en SharedPreferences (mejor usar EncryptedSharedPreferences en producción)
+                if (response.token.isNotEmpty()) {
+                    // Guarda toda la información del usuario
                     val prefs = getSharedPreferences("ecosens_prefs", Context.MODE_PRIVATE)
-                    prefs.edit().putString("auth_token", response.token).apply()
+                    prefs.edit().apply {
+                        putString("auth_token", response.token)
+                        putInt("user_id", response.userId)
+                        putInt("tipo_id", response.tipoId)
+                        putString("user_email", email)
+                        apply()
+                    }
 
                     Toast.makeText(this@MainActivity, "Login exitoso", Toast.LENGTH_SHORT).show()
 
-                    // Navega a la siguiente pantalla (ajusta ActivityDestino)
-                    // val intent = Intent(this@MainActivity, DashboardActivity::class.java)
-                    // startActivity(intent)
-                    // finish()
+                    // Navega a HomeActivity
+                    val intent = Intent(this@MainActivity, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 } else {
-                    val msg = response.token?: "Error en login"
-                    Toast.makeText(this@MainActivity, msg, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@MainActivity, "Error en login", Toast.LENGTH_LONG).show()
                 }
             } catch (e: Exception) {
                 progress.visibility = android.view.View.GONE
